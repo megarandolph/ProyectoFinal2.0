@@ -1,0 +1,42 @@
+﻿@model ProyectoFinal2._0.Nominas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Nominas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.año)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.año)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.monto_total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.monto_total)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mes1.mes1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mes1.mes1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.nominaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
