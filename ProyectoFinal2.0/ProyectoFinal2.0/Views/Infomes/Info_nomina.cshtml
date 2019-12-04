@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ProyectoFinal2._0.Nominas>
+
+@{
+    ViewBag.Title = "Info_nomina";
+}
+
+<h2>Info_nomina</h2>
+
+<h2>info_nomina</h2>
+@using (Html.BeginForm())
+{
+    <p>
+        Buscar por Año: <input type="number" name="Año" id="Año" />
+        O Buscar por Mes: <input type="number" name="Mes" id="Mes" placeholder="Numero del mes" />
+        <input type="submit" value="Buscar" />
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.año)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.monto_total)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mes1.mes1)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.año)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.monto_total)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mes1.mes1)
+            </td>
+
+        </tr>
+    }
+
+</table>
