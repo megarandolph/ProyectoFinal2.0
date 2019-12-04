@@ -32,7 +32,8 @@ namespace ProyectoFinal2._0.Controllers
         }
         public ActionResult Emp_activo(String Nombre, String Departamento)
         {
-            var busqueda = from s in db.Empleados select s;
+            var empleados = db.Empleados.Include(e => e.Cargo).Include(e => e.Departamentos);
+            var busqueda = empleados.Where(s => s.estatus == true);
 
             if (!String.IsNullOrEmpty(Nombre))
             {
@@ -45,6 +46,17 @@ namespace ProyectoFinal2._0.Controllers
                 busqueda = busqueda.Where(s => s.departamentoId == res);
             }
             return View(busqueda.ToList());
+        }
+        public ActionResult Emp_inactivo()
+        {
+            var empleados = db.Empleados.Include(e => e.Cargo).Include(e => e.Departamentos);
+            var busqueda = empleados.Where(s => s.estatus == false);
+            return View(busqueda.ToList());
+
+        }
+        public ActionResult Departament()
+        {
+            return View(db.Departamentos.ToList());
         }
     }
 }

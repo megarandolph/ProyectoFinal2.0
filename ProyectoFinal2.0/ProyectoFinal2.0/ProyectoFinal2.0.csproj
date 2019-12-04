@@ -282,6 +282,8 @@
     <Content Include="Views\Licencias\Index.cshtml" />
     <Content Include="Views\Infomes\Info_nomina.cshtml" />
     <Content Include="Views\Infomes\Emp_activo.cshtml" />
+    <Content Include="Views\Infomes\Emp_inactivo.cshtml" />
+    <Content Include="Views\Infomes\Departament.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
