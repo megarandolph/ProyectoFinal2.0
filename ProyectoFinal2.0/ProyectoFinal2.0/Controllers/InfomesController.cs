@@ -89,5 +89,10 @@ namespace ProyectoFinal2._0.Controllers
             return View(busqueda.ToList());
 
         }
+        public ActionResult Permisos_emp()
+        {
+
+            return View(db.Permisos.ToList());
+        }
     }
 }
