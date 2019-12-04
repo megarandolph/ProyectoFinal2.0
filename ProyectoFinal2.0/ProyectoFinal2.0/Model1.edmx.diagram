@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="561ff3b1e6e041d1bb39ccd7313d89e2" Name="Diagram1">
+        <EntityTypeShape EntityType="ProyectoFinalModel.Cargo" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoFinalModel.Departamentos" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoFinalModel.Empleados" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoFinalModel.Licencias" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoFinalModel.Mes" Width="1.5" PointX="1.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoFinalModel.Nominas" Width="1.5" PointX="4" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoFinalModel.Permisos" Width="1.5" PointX="5.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoFinalModel.Salidas" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoFinalModel.Tipo_salida" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoFinalModel.Vacaciones" Width="1.5" PointX="5.25" PointY="12.125" IsExpanded="true" />
+        <AssociationConnector Association="ProyectoFinalModel.FK__Empleados__cargo__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoFinalModel.FK__Empleados__depar__239E4DCF" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoFinalModel.FK__Licencias__emp_I__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoFinalModel.FK__Permisos__emp_id__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoFinalModel.FK__Salidas__emp_id__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoFinalModel.FK__Vacacione__emp_i__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoFinalModel.FK__Nominas__mes__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoFinalModel.FK__Salidas__tipo_sa__286302EC" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
