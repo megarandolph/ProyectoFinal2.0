@@ -1,10 +1,18 @@
 ﻿@model IEnumerable<ProyectoFinal2._0.Empleados>
 
 @{
-    ViewBag.Title = "Emp_inactivo";
+    ViewBag.Title = "Sal_mes";
 }
 
-<h2>Emp_inactivo</h2>
+<h2>Sal_mes</h2>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Buscar por Mes: <input type="number" name="mes" id="mes" placeholder="Numero del mes" />
+        <input type="submit" value="Buscar" />
+    </p>
+}
 
 <table class="table">
     <tr>

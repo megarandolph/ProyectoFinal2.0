@@ -11,6 +11,14 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
+            @Html.DisplayNameFor(model => model.año_ingreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.año_ingreso)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.emp_codigo)
         </dt>
 
@@ -43,14 +51,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ingreso)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ingreso)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.salario)
         </dt>
 
@@ -80,6 +80,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.Departamentos.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mes.mes1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mes.mes1)
         </dd>
 
     </dl>

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ProyectoFinal2._0.Cargo>
+
+@{
+    ViewBag.Title = "Carg";
+}
+
+<h2>Cargos</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cargo1)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cargo1)
+            </td>
+
+        </tr>
+    }
+
+</table>

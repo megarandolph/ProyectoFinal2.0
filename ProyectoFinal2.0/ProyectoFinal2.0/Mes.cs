@@ -18,6 +18,7 @@ namespace ProyectoFinal2._0
         public Mes()
         {
             this.Nominas = new HashSet<Nominas>();
+            this.Empleados = new HashSet<Empleados>();
         }
     
         public int mesId { get; set; }
@@ -25,5 +26,7 @@ namespace ProyectoFinal2._0
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Nominas> Nominas { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Empleados> Empleados { get; set; }
     }
 }

@@ -58,5 +58,36 @@ namespace ProyectoFinal2._0.Controllers
         {
             return View(db.Departamentos.ToList());
         }
+        public ActionResult Carg()
+        {
+            return View(db.Cargo.ToList());
+        }
+        public ActionResult Ent_mes(int? mes)
+        {
+
+            var busqueda = from s in db.Empleados select s;
+
+            if (mes != null)
+            { 
+                busqueda = busqueda.Where(s => s.mes_ingreso == mes);
+            }
+
+            return View(busqueda.ToList());
+
+        }
+        public ActionResult Sal_mes(int? mes)
+        {
+
+            var empleados = db.Empleados.Include(e => e.Cargo).Include(e => e.Departamentos);
+            var busqueda = empleados.Where(s => s.estatus == false);
+
+            if (mes != null)
+            {
+                busqueda = busqueda.Where(s => s.mes_ingreso == mes);
+            }
+
+            return View(busqueda.ToList());
+
+        }
     }
 }

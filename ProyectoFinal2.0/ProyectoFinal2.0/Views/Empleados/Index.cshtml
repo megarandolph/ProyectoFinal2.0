@@ -12,6 +12,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.año_ingreso)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.emp_codigo)
         </th>
         <th>
@@ -22,9 +25,6 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.telefono)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ingreso)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.salario)
@@ -38,11 +38,17 @@
         <th>
             @Html.DisplayNameFor(model => model.Departamentos.nombre)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mes.mes1)
+        </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.año_ingreso)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.emp_codigo)
         </td>
@@ -56,9 +62,6 @@
             @Html.DisplayFor(modelItem => item.telefono)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ingreso)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.salario)
         </td>
         <td>
@@ -69,6 +72,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Departamentos.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mes.mes1)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.empleadoId }) |

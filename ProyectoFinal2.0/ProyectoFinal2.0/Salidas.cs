@@ -20,7 +20,7 @@ namespace ProyectoFinal2._0
         public string motivo { get; set; }
         public Nullable<System.DateTime> fecha_salida { get; set; }
     
-        public virtual Empleados Empleados { get; set; }
         public virtual Tipo_salida Tipo_salida1 { get; set; }
+        public virtual Empleados Empleados { get; set; }
     }
 }

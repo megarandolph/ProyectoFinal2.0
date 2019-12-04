@@ -26,16 +26,18 @@ namespace ProyectoFinal2._0
         public int empleadoId { get; set; }
         public Nullable<int> departamentoId { get; set; }
         public Nullable<int> cargoId { get; set; }
+        public Nullable<int> mes_ingreso { get; set; }
+        public Nullable<int> año_ingreso { get; set; }
         public string emp_codigo { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
         public string telefono { get; set; }
-        public Nullable<System.DateTime> ingreso { get; set; }
         public Nullable<decimal> salario { get; set; }
         public Nullable<bool> estatus { get; set; }
     
         public virtual Cargo Cargo { get; set; }
         public virtual Departamentos Departamentos { get; set; }
+        public virtual Mes Mes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Licencias> Licencias { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -27,7 +27,6 @@ namespace ProyectoFinal2._0
     
         public virtual DbSet<Cargo> Cargo { get; set; }
         public virtual DbSet<Departamentos> Departamentos { get; set; }
-        public virtual DbSet<Empleados> Empleados { get; set; }
         public virtual DbSet<Licencias> Licencias { get; set; }
         public virtual DbSet<Mes> Mes { get; set; }
         public virtual DbSet<Nominas> Nominas { get; set; }
@@ -35,5 +34,6 @@ namespace ProyectoFinal2._0
         public virtual DbSet<Salidas> Salidas { get; set; }
         public virtual DbSet<Tipo_salida> Tipo_salida { get; set; }
         public virtual DbSet<Vacaciones> Vacaciones { get; set; }
+        public virtual DbSet<Empleados> Empleados { get; set; }
     }
 }

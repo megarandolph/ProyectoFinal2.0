@@ -17,7 +17,7 @@ namespace ProyectoFinal2._0.Controllers
         // GET: Empleados
         public ActionResult Index()
         {
-            var empleados = db.Empleados.Include(e => e.Cargo).Include(e => e.Departamentos);
+            var empleados = db.Empleados.Include(e => e.Cargo).Include(e => e.Departamentos).Include(e => e.Mes);
             return View(empleados.ToList());
         }
 
@@ -41,6 +41,7 @@ namespace ProyectoFinal2._0.Controllers
         {
             ViewBag.cargoId = new SelectList(db.Cargo, "cargoId", "cargo1");
             ViewBag.departamentoId = new SelectList(db.Departamentos, "departamentoId", "nombre");
+            ViewBag.mes_ingreso = new SelectList(db.Mes, "mesId", "mes1");
             return View();
         }
 
@@ -49,7 +50,7 @@ namespace ProyectoFinal2._0.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "empleadoId,departamentoId,cargoId,emp_codigo,nombre,apellido,telefono,ingreso,salario,estatus")] Empleados empleados)
+        public ActionResult Create([Bind(Include = "empleadoId,departamentoId,cargoId,mes_ingreso,año_ingreso,emp_codigo,nombre,apellido,telefono,salario,estatus")] Empleados empleados)
         {
             if (ModelState.IsValid)
             {
@@ -60,6 +61,7 @@ namespace ProyectoFinal2._0.Controllers
 
             ViewBag.cargoId = new SelectList(db.Cargo, "cargoId", "cargo1", empleados.cargoId);
             ViewBag.departamentoId = new SelectList(db.Departamentos, "departamentoId", "nombre", empleados.departamentoId);
+            ViewBag.mes_ingreso = new SelectList(db.Mes, "mesId", "mes1", empleados.mes_ingreso);
             return View(empleados);
         }
 
@@ -77,6 +79,7 @@ namespace ProyectoFinal2._0.Controllers
             }
             ViewBag.cargoId = new SelectList(db.Cargo, "cargoId", "cargo1", empleados.cargoId);
             ViewBag.departamentoId = new SelectList(db.Departamentos, "departamentoId", "nombre", empleados.departamentoId);
+            ViewBag.mes_ingreso = new SelectList(db.Mes, "mesId", "mes1", empleados.mes_ingreso);
             return View(empleados);
         }
 
@@ -85,7 +88,7 @@ namespace ProyectoFinal2._0.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "empleadoId,departamentoId,cargoId,emp_codigo,nombre,apellido,telefono,ingreso,salario,estatus")] Empleados empleados)
+        public ActionResult Edit([Bind(Include = "empleadoId,departamentoId,cargoId,mes_ingreso,año_ingreso,emp_codigo,nombre,apellido,telefono,salario,estatus")] Empleados empleados)
         {
             if (ModelState.IsValid)
             {
@@ -95,6 +98,7 @@ namespace ProyectoFinal2._0.Controllers
             }
             ViewBag.cargoId = new SelectList(db.Cargo, "cargoId", "cargo1", empleados.cargoId);
             ViewBag.departamentoId = new SelectList(db.Departamentos, "departamentoId", "nombre", empleados.departamentoId);
+            ViewBag.mes_ingreso = new SelectList(db.Mes, "mesId", "mes1", empleados.mes_ingreso);
             return View(empleados);
         }
 
